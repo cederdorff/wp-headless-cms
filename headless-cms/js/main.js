@@ -19,7 +19,7 @@ function appendPosts(posts) {
     console.log(post);
     htmlTemplate += /*html*/`
       <article>
-      <img src="${getFeaturedImageUrl(post)}">
+        <img src="${getFeaturedImageUrl(post)}">
         <h3>${post.title.rendered}</h3>
         <p>${post.content.rendered}</p>
       </article>
