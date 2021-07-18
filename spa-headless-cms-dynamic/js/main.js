@@ -37,7 +37,7 @@ function addMenuItem(page) {
 
 // appends page section to the DOM
 function addPage(page) {
-  document.querySelector("#pages").innerHTML += `
+  document.querySelector("#pages").innerHTML += /*html*/ `
   <section id="${page.slug}" class="page">
     <header class="topbar">
       <h2>${page.title.rendered}</h2>
