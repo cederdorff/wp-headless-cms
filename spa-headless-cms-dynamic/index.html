@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Movies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Movie Single Page Application">
+  <meta name="author" content="Rasmus Cederdorff">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+</head>
+
+<body onhashchange="pageChange()">
+  <!-- tabbar navigation -->
+  <nav id="menu" class="tabbar"></nav>
+
+  <!-- pages -->
+  <main id="pages"></main>
+
+  <!-- loader  -->
+  <section id="loader">
+    <div class="spinner"></div>
+  </section>
+
+  <!-- SPA functionality  -->
+  <script src="js/spa.js"></script>
+  <!-- main js file -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
