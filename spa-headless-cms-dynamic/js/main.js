@@ -16,23 +16,21 @@ fetch("http://headlesscms.cederdorff.com/wp-json/wp/v2/pages?_embed")
 Appends and generate pages
 */
 function appendPages(pages) {
-  var menuTemplate = "";
   for (let page of pages) {
     addMenuItem(page);
     addPage(page);
   }
+
   pageChange(pages[0].slug); // selecting the first page in the array of pages
   getPersons();
   getTeachers();
-  setTimeout(function () {
-    showLoader(false);
-  }, 500);
+  showLoader(false);
 }
 
 // appends menu item to the nav menu
 function addMenuItem(page) {
   document.querySelector("#menu").innerHTML += `
-  <a href="#${page.slug}" onclick="showPage('${page.slug}')">${page.title.rendered}</a>
+    <a href="#${page.slug}" onclick="showPage('${page.slug}')">${page.title.rendered}</a>
   `;
 
 }
@@ -127,6 +125,6 @@ function showLoader(show = true) {
   if (show) {
     loader.classList.remove("hide");
   } else {
-    loader.classList.add("hide");
+    setTimeout(() => loader.classList.add("hide"), 500);
   }
 }
